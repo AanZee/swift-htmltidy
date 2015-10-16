@@ -2,34 +2,7 @@
  * Raw tag objects.
  * @type {object}
  */
-exports.tags = require('./tags');
-
-/**
- * Raw filter methods.
- * @type {object}
- */
-exports.filters = require('./filters');
-
-/**
- * Add an Extras filter to your swig instance.
- *
- * @example
- * var swig = require('swig'),
- *   extras = require('swig-extras');
- * extras.useFilter(swig, 'markdown');
- *
- * @param  {object} swig   Swig instance.
- * @param  {string} filter Extras filter name.
- * @return {undefined}
- * @throws {Error} If Extras does not have a filter with the given name.
- */
-exports.useFilter = function (swig, filter) {
-	var f = exports.filters[filter];
-	if (!f) {
-		throw new Error('Filter "' + filter + '" does not exist.');
-	}
-	swig.setFilter(filter, f);
-};
+exports.tag = require('./tags/htmltidy.js');
 
 /**
  * Add an Extras tag to your swig instance.
@@ -46,7 +19,7 @@ exports.useFilter = function (swig, filter) {
  * @throws {Error} If Extras does not have a tag with the given name.
  */
 exports.useTag = function (swig, tag) {
-	var t = exports.tags[tag];
+	var t = exports.tag;
 	if (!t) {
 		throw new Error('Tag "' + tag + '" does not exist.');
 	}

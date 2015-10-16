@@ -11,7 +11,7 @@ exports.compile = function (compiler, args, content, parents, options, blockName
 		'  var __o = _output;\n' +
 		'  _output = "";\n' +
 		compiler(content, parents, options, blockName) + ';\n' +
-		'  __o += _ext.htmltidy.toHTML(_output);\n' +
+		'  __o += _ext.htmltidy.tidy(_output);\n' +
 		'  _output = __o;\n' +
 		'})();\n';
 };
