@@ -2,13 +2,13 @@
  * Raw tag objects.
  * @type {object}
  */
-exports.tags = require('./lib/tags');
+exports.tags = require('./tags');
 
 /**
  * Raw filter methods.
  * @type {object}
  */
-exports.filters = require('./lib/filters');
+exports.filters = require('./filters');
 
 /**
  * Add an Extras filter to your swig instance.
