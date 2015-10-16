@@ -1,0 +1,11 @@
+{
+  "name": "swig-htmltidy",
+  "version": "1.0.0",
+  "description": "A tag to html tidy the content inside it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gerhard Richard Edens",
+  "license": "MIT"
+}
